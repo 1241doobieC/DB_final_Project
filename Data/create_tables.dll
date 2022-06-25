@@ -1,0 +1,86 @@
+CREATE TABLE Person (
+	person_id bigint(20) unsigned not null PRIMARY KEY,
+	name varchar(20) not null,
+	user_name varchar(20) not null,
+	password varchar(20) not null,
+	phone varchar(10),
+	email varchar(20),
+	address varchar(50)
+);
+
+CREATE TABLE Position (
+	person_id bigint(20) unsigned not null PRIMARY KEY,
+	position INT
+);
+
+CREATE TABLE Driver (
+	person_id bigint(20) not null PRIMARY KEY,
+	license_num varchar(10),
+	location INT,
+	_rank varchar(10),
+	area varchar(10)
+);
+
+CREATE TABLE member (
+	_rank varchar(10),
+	market_name varchar(15)
+);
+
+CREATE TABLE analyzer (
+	id int not null PRIMARY KEY
+);
+
+CREATE TABLE Employee (
+	id int not null PRIMARY KEY
+);
+
+CREATE TABLE Product(
+	edit_time varchar(10),
+	name varchar(10),
+	product_id bigint(20)
+);
+
+CREATE TABLE Transaction (
+	transaction_id varchar(10),
+	time TIMESTAMP,
+	address varchar(30),
+	pickup_t TIMESTAMP
+);
+
+CREATE TABLE work(
+	id bigint(20),
+	work_id bigint(20)
+);
+
+CREATE TABLE buy(
+	id bigint(20),
+	transaction_id bigint(20)
+);
+
+CREATE TABLE sell(
+	id bigint(20),
+	transaction_id bigint(20)
+);
+
+CREATE TABLE own(
+	id bigint(20),
+	product_id bigint(20)
+);
+
+CREATE TABLE contain(
+	product_id bigint(20),
+	amount int,
+	transaction_id bigint(20)
+);
+
+CREATE TABLE _order (
+	departure_or_arrive int,
+	address varchar(35),
+	work_id int,
+	time TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE time(
+	id bigint(20),
+	work_id bigint(20)
+);

@@ -1,0 +1,241 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Create Order
+  style.
+    @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+    body {
+    background: url("http://all4desktop.com/data_images/original/4236532-background-images.jpg");
+    font-family: "Roboto Condensed", sans-serif;
+    color: #262626;
+    margin: 5% 0;
+    }
+    .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    @media (min-width: 1200px) {
+    .container {
+    max-width: 1140px;
+    }
+    }
+    .d-flex {
+    display: flex;
+    flex-direction: row;
+    background: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 25px;
+    }
+    form {
+    flex: 4;
+    display: inline;
+    }
+    .Yorder {
+    flex: 2;
+    }
+    .title {
+    background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0, #5195a8),
+    color-stop(100, #70eaff)
+    );
+    background: -moz-linear-gradient(
+    top left,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    background: -ms-linear-gradient(
+    top left,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    background: -o-linear-gradient(
+    top left,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    background: linear-gradient(
+    to bottom right,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: #f6f6f6;
+    }
+    h2 {
+    margin: 0;
+    padding-left: 15px;
+    }
+    .required {
+    color: red;
+    }
+    label,
+    table {
+    display: block;
+    margin: 15px;
+    }
+    label > span {
+    float: left;
+    width: 25%;
+    margin-top: 12px;
+    padding-right: 10px;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+    width: 70%;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadada;
+    color: #888;
+    }
+    select {
+    width: 72%;
+    height: 45px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    }
+    .Yorder {
+    margin-top: 15px;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #dadada;
+    }
+    table {
+    margin: 0;
+    padding: 0;
+    }
+    th {
+    border-bottom: 1px solid #dadada;
+    padding: 10px 0;
+    }
+    tr > td:nth-child(1) {
+    text-align: left;
+    color: #2d2d2a;
+    }
+    tr > td:nth-child(2) {
+    text-align: right;
+    color: #52ad9c;
+    }
+    td {
+    border-bottom: 1px solid #dadada;
+    padding: 25px 25px 25px 0;
+    }
+    p {
+    display: block;
+    color: #888;
+    margin: 0;
+    padding-left: 25px;
+    }
+    .Yorder > div {
+    padding: 15px 0;
+    }
+    button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: #52ad9c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    }
+    button:hover {
+    cursor: pointer;
+    background: #428a7d;
+    }
+.container
+  .title
+    h2 Order Create Form
+    if State
+        h3 #{State}
+        h3 Order ID: #{order_ID}
+        
+  .d-flex
+    form(action='/create' method='post')
+      label
+        span.fname
+          | &#x6536;&#x4EF6;&#x8005;&#x540D;&#x7A31; 
+          span.required  * 
+        input(type='text' name='receiver_name' required='')
+      label
+        span
+          | Email 
+          span.required *
+        input(type='email' name='receiver_email' required='')
+      label
+        span
+          | &#x624B;&#x6A5F;
+          span.required *
+        input(type='text' name='receiver_PN' required='')
+        // 收件者手機號碼
+      label
+        span
+          | &#x5730;&#x5740; 
+          span.required *
+        input(type='text' name='receiver_addr' placeholder='' required='')
+      label
+        span
+          | &#x7E23;&#x5E02; 
+          span.required *
+        select(name='receiver_selection')
+          option(value='select') &#x8ACB;&#x9078;&#x64C7;&#x5340;&#x57DF;...
+          option(value='TPH') &#x53F0;&#x5317;&#x5E02;
+          option(value='TPE') &#x65B0;&#x5317;&#x5E02;
+          option(value='KLU') &#x57FA;&#x9686;&#x5E02;
+          option(value='ILN') &#x5B9C;&#x862D;&#x7E23;
+          option(value='HSH') &#x65B0;&#x7AF9;&#x7E23;
+          option(value='HSC') &#x65B0;&#x7AF9;&#x5E02;
+          option(value='TYC') &#x6843;&#x5712;&#x5E02;
+          option(value='MAL') &#x82D7;&#x6817;&#x7E23;
+          option(value='TXG') &#x53F0;&#x4E2D;&#x5E02;
+          option(value='CWH') &#x5F70;&#x5316;&#x7E23;
+          option(value='NTC') &#x5357;&#x6295;&#x7E23;
+          option(value='CHY') &#x5609;&#x7FA9;&#x7E23;
+          option(value='YLH') &#x96F2;&#x6797;&#x7E23;
+          option(value='TNN') &#x53F0;&#x5357;&#x5E02;
+          option(value='KHH') &#x9AD8;&#x96C4;&#x5E02;
+          option(value='PEH') &#x6F8E;&#x6E56;&#x7E23;
+          option(value='IUH') &#x5C4F;&#x6771;&#x7E23;
+          option(value='TTT') &#x53F0;&#x6771;&#x7E23;
+          option(value='HWA') &#x82B1;&#x84EE;&#x7E23;
+          option(value='KMN') &#x91D1;&#x9580;&#x7E23;
+          option(value='LNN') &#x9023;&#x6C5F;&#x7E23;
+          option(value='chinaBye')
+            | &#x4E2D;&#x83EF;&#x6C11;&#x570B;&#x53DB;&#x4E82;&#x5730;&#x5340;(Not Valid)
+      label
+        span
+          | &#x90F5;&#x905E;&#x5340;&#x865F; 
+          span.required *
+        input(type='number' name='receiver_plz' min='0')
+      label
+        span
+          | &#x8A02;&#x55AE;&#x5167;&#x5BB9; 
+          span.required *
+        input(type='text' name='productName' required='' placeholder='請輸入名稱')
+      label
+        span
+          | &#x5168;&#x90E8;&#x50F9;&#x503C; 
+          span.required *
+        input(type='number' name='price' required='' placeholder='總價' min='0')
+      label
+        span
+          | &#x5BC4;&#x9001;&#x8CBB;&#x7528;
+          span.required (&#x56FA;&#x5B9A;&#x50F9;&#x683C;)
+        input(type='number' name='fee' value='80' placeholder='80' readonly='readonly')
+      label
+        span &#x5099;&#x8A3B;
+        input(type='text' name='apartment')
+      button(type='submit') &#x78BA;&#x5B9A;
+    

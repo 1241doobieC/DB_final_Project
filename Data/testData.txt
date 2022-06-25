@@ -1,0 +1,27 @@
+insert into Person(user_name, phone, email, addr, password, pos) values("root", "0912345678","derrikk@ntnu.csie.com", "西瓜街資工路1號", "1234567", "486");
+insert into Person(user_name, phone, email, addr, password, pos) values("hgy", "09888888","fdt@ksc.88.com", "海港市發財路888號", "kf888", "66688");
+insert into Buy(id, order_id) values ("4995", "6666");
+insert into Sell(id, order_id) values ("7887", "6666");
+insert into Orders(order_id, time) values ("6666", "2022-3-4 12:34:56");
+insert into Orders(order_id, time) values ("1111", "2022-3-5 12:36:56");
+insert into States(trans_id, order_id) values ("1111", "6666");
+insert into Trans(trans_id, cur_state, addr) values ("1111", "3", "ntnu");
+insert into Product(p_name, cost) values("NinLaoShiLae", "99999");
+    
+insert into States(trans_id, order_id) values ("12", "2763");
+insert into Trans(trans_id, cur_state, addr) values ("12", "0", "NTTTTNU");
+
+insert into States(trans_id, order_id) values ("13", "2764");
+insert into Trans(trans_id, cur_state, addr) values ("13", "1", "Taiwan");
+
+insert into States(trans_id, order_id) values ("14", "2765");
+insert into Trans(trans_id, cur_state, addr) values ("14", "0", "Tauchung");
+
+insert into States(trans_id, order_id) values ("15", "2766");
+insert into Trans(trans_id, cur_state, addr) values ("15", "1", "潮州");
+
+insert into States(trans_id, order_id) values ("16", "2767");
+insert into Trans(trans_id, cur_state, addr) values ("16", "0", "Tauchung");
+
+insert into States(trans_id, order_id) values ("17", "2768");
+insert into Trans(trans_id, cur_state, addr) values ("17", "0", "Tauchung");

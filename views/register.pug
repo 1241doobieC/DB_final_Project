@@ -1,0 +1,370 @@
+//- head
+//-   meta(charset='utf-8')
+//-   title &#x7269;&#x6D41;&#x516C;&#x53F8;&#xFF5C;&#x8A3B;&#x518A;
+//-   link(href='css/style.css' type='text/css' rel='stylesheet')
+//-   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+//-   style.
+//-     * {
+//-     padding: 0;
+//-     margin: 0;
+//-     }
+//-     body {
+//-     background: url(http://wrbbradio.org/wp-content/uploads/2016/10/grey-background-07.jpg)
+//-     no-repeat center fixed;
+//-     background-size: cover;
+//-     }
+//-     .container {
+//-     background: #2d3e3f;
+//-     width: 350px;
+//-     height: 400px;
+//-     padding-bottom: 20px;
+//-     position: absolute;
+//-     top: 50%;
+//-     left: 50%;
+//-     transform: translate(-50%, -50%);
+//-     margin: auto;
+//-     padding: 70px 50px 20px 50px;
+//-     }
+//-     .fl {
+//-     float: left;
+//-     width: 110px;
+//-     line-height: 35px;
+//-     }
+//-     .fontLabel {
+//-     color: white;
+//-     }
+//-     .fr {
+//-     float: right;
+//-     }
+//-     .clr {
+//-     clear: both;
+//-     }
+//-     .box {
+//-     width: 360px;
+//-     height: 35px;
+//-     margin-top: 10px;
+//-     font-family: verdana;
+//-     font-size: 12px;
+//-     }
+//-     .textBox {
+//-     height: 35px;
+//-     width: 190px;
+//-     border: none;
+//-     padding-left: 20px;
+//-     }
+//-     .new {
+//-     float: left;
+//-     }
+//-     .iconBox {
+//-     height: 35px;
+//-     width: 40px;
+//-     line-height: 38px;
+//-     text-align: center;
+//-     background: #ff6600;
+//-     }
+//-     .radio {
+//-     color: white;
+//-     background: #2d3e3f;
+//-     line-height: 38px;
+//-     }
+//-     .terms {
+//-     line-height: 35px;
+//-     text-align: center;
+//-     background: #2d3e3f;
+//-     color: white;
+//-     }
+//-     .submit {
+//-     float: right;
+//-     border: none;
+//-     color: white;
+//-     width: 110px;
+//-     height: 35px;
+//-     background: #ff6600;
+//-     text-transform: uppercase;
+//-     cursor: pointer;
+//-     }
+//- // Body of Form starts
+//- .container
+//-   form(method='post' autocomplete='on')
+//-     // First name
+//-     .box
+//-       label.fl.fontLabel(for='firstName')
+//-         | 名字:
+//-       .new.iconBox
+//-         i.fa.fa-user(aria-hidden='true')
+//-       .fr
+//-         input.textBox(type='text' name='username' placeholder='名字' autofocus='on' required='')
+//-       .clr
+//-     // First name
+//-     // Second name
+//-     //- .box
+//-       label.fl.fontLabel(for='secondName')
+//-         | Last Name:
+//-       .fl.iconBox
+//-         i.fa.fa-user(aria-hidden='true')
+//-       .fr
+//-         input.textBox(type='text' required='' name='secondName' placeholder='Last Name')
+//-       .clr
+//-     // Second name
+//-     // -Password----
+//-     .box
+//-       label.fl.fontLabel(for='password')
+//-         | 密碼:
+//-       .fl.iconBox
+//-         i.fa.fa-key(aria-hidden='true')
+//-       .fr
+//-         input.textBox(type='Password' required='' name='password' placeholder='密碼')
+//-       .clr
+//-     // -Password--
+//-     // -Phone No.----
+//-     .box
+//-       label.fl.fontLabel(for='phone')  電話: 
+//-       .fl.iconBox
+//-         i.fa.fa-phone-square(aria-hidden='true')
+//-       .fr
+//-         input.textBox(type='number' required='' name='phone' maxlength='10' placeholder='Phone No.')
+//-       .clr
+//-     // -Phone No.--
+//-     // -Email ID--
+//-     .box
+//-       label.fl.fontLabel(for='email')  Email: 
+//-       .fl.iconBox
+//-         i.fa.fa-envelope(aria-hidden='true')
+//-       .fr
+//-         input.textBox(type='email' required='' name='email' placeholder='Email')
+//-       .clr
+//-     // Email ID---
+//-     // -Address
+//-     .box
+//-       label.fl.fontLabel(for='addr')  地址: 
+      
+//-       .fr
+//-         input.textBox(type='text' required='' name='addr' placeholder='地址')
+//-       .clr
+//-     //  Address--
+//-     // -Gender---
+//-     //- .box.radio
+//-       label.fl.fontLabel(for='gender')  性別: 
+//-       input(type='radio' name='Gender' value='Male' required='')
+//-       | &#x9;&#x9;&#x9;&#x9;&#x9;Male &nbsp; &nbsp; &nbsp; &nbsp;
+//-       input(type='radio' name='Gender' value='Female' required='')
+//-       | &#x9;&#x9;&#x9;&#x9;&#x9;Female
+//-     // -Gender-
+//-     // -Submit Button----
+//-     .box(style='background: #2d3e3f')
+//-       input.submit(type='Submit' name='Submit' value='SUBMIT')
+//-     // -Submit Button---
+  //- form(action='http://localhost:8080')
+  //-   input(type='submit' value='主頁')
+
+//- // Body of Form ends-
+
+  
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title My database project
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js')
+  style.
+    @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+    body {
+    background: url("http://all4desktop.com/data_images/original/4236532-background-images.jpg");
+    font-family: "Roboto Condensed", sans-serif;
+    color: #262626;
+    margin: 5% 0;
+    }
+    .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    @media (min-width: 1200px) {
+    .container {
+    max-width: 1140px;
+    }
+    }
+    .d-flex {
+    display: flex;
+    flex-direction: row;
+    background: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 25px;
+    }
+    form {
+    flex: 4;
+    display: inline;
+    }
+    .Yorder {
+    flex: 2;
+    }
+    .title {
+    background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0, #5195a8),
+    color-stop(100, #70eaff)
+    );
+    background: -moz-linear-gradient(
+    top left,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    background: -ms-linear-gradient(
+    top left,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    background: -o-linear-gradient(
+    top left,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    background: linear-gradient(
+    to bottom right,
+    #5195a8 0%,
+    #70eaff 100%
+    );
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    color: #f6f6f6;
+    }
+    h2 {
+    margin: 0;
+    padding-left: 15px;
+    }
+    .required {
+    color: red;
+    }
+    label,
+    table {
+    display: block;
+    margin: 15px;
+    }
+    label > span {
+    float: left;
+    width: 25%;
+    margin-top: 12px;
+    padding-right: 10px;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+    width: 70%;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadada;
+    color: #888;
+    }
+    select {
+    width: 72%;
+    height: 45px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    }
+    .Yorder {
+    margin-top: 15px;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #dadada;
+    }
+    table {
+    margin: 0;
+    padding: 0;
+    }
+    th {
+    border-bottom: 1px solid #dadada;
+    padding: 10px 0;
+    }
+    tr > td:nth-child(1) {
+    text-align: left;
+    color: #2d2d2a;
+    }
+    tr > td:nth-child(2) {
+    text-align: right;
+    color: #52ad9c;
+    }
+    td {
+    border-bottom: 1px solid #dadada;
+    padding: 25px 25px 25px 0;
+    }
+    p {
+    display: block;
+    color: #888;
+    margin: 0;
+    padding-left: 25px;
+    }
+    .Yorder > div {
+    padding: 15px 0;
+    }
+    button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: #52ad9c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    }
+    button:hover {
+    cursor: pointer;
+    background: #428a7d;
+    }
+.container
+  .title
+    h2 Register
+  .d-flex
+
+    form(action='/register' method='post')
+      // Name
+      if status 
+          span.h5 #{status}
+          br
+          span.h6 Your Email: #{email}
+          br
+      label
+        span
+          | Name: 
+          span.required *
+        input(type='text' name='name' required='' placeholder='name' autofocus='on')
+      // -Password----
+      label
+        span
+          | Password: 
+          span.required *
+        input(type='text' name='password' required='' placeholder='Password' autofocus='on')
+      // email
+      label
+        span
+          | Phone Number:
+          span.required *
+        input(type='text' name='phone' maxlength='10' required='' placeholder='Phone Number' autofocus='on')
+      // email
+      label
+        span
+          | Email: 
+          span.required *
+        input(type='text' name='email' required='' placeholder='E-mail' autofocus='on' )
+      // address
+      label
+        span
+          | Address: 
+          span.required *
+        input(type='text' name='address' required='' placeholder='Address' autofocus='on')
+      // Privilege Code
+      label
+        span
+          | Privilege Code: 
+          span
+        input(type='text' name='p_code' placeholder="Privilege Code(Keep empty if you don't have the code)" autofocus='on')
+      button(type='submit') 註冊
+  form(action='http://54.92.215.40:8080/')
+    button(type='submit' ) 回到主頁
